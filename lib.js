@@ -56,7 +56,7 @@ lib.generateFormTextField = function(name) {
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
     //Adrian Chen
-    return '<label>' + label + '</label> <input type="text" name="'name+'">'
+    return '<label>' + label + '</label> <input type="text" name="'+name+'">'
 }
 
 lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
