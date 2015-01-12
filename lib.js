@@ -29,7 +29,13 @@ lib.generateUnorderedList = function(arrayOfText) {
 }
 
 lib.generateTableRow = function (arrayOfText) {
-    return "not yet implemented"
+    //Adrian Chen
+    var list = "<tr>"
+    for (var i = 0; i < arrayOfText.length; i++) {
+        list += "<td>" + arrayOfText[i] + "</td>"
+    }
+    list += "</tr>"
+    return list
 }
 
 lib.generateTable = function(twoDimensionalArrayOfText) {
@@ -49,6 +55,7 @@ lib.generateFormTextField = function(name) {
 }
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
+    //Adrian Chen
     return '<label>' + label + '</label> <input type="text" name="'name+'">'
 }
 
