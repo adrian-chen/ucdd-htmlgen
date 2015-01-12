@@ -49,11 +49,17 @@ lib.generateFormTextField = function(name) {
 }
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
-    return '<label>' + label + '</label> <input type="text" name="'name+'">'
+    return '<label>' + label + '</label> <input type="text" name="'+name+'">'
 }
 
 lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
-    return "not yet implemented"
+    var myDropdown = "<select>";
+ 	for(var i = 0; i < arrayOfText.length; i++)
+ 	{
+ 		myDropdown += "<option value='" + arrayOfValues[i] + "'>" + arrayOfText[i] + "</option>";
+ 	}
+ 	myDropdown += "</select>";
+ 	return myDropdown
 }
 
 lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allowfullscreen) {
