@@ -39,7 +39,12 @@ lib.generateTableRow = function (arrayOfText) {
 }
 
 lib.generateTable = function(twoDimensionalArrayOfText) {
-    return "not yet implemented"
+    //Adrian Chen
+    var list = ""
+    for (var i = 0; i < twoDimensionalArrayOfText[1].length; i++) {
+        list += "<td>" + twoDimensionalArrayOfText[1][i] + "</td>"
+    }
+    return list
 }
 
 lib.generateHyperLink = function(url, text) {
@@ -47,11 +52,8 @@ lib.generateHyperLink = function(url, text) {
 }
 
 lib.generateFormTextField = function(name) {
-    return "not yet implemented"
-}
-
-lib.generateFormTextField = function(name) {
-    return "not yet implemented"
+    //Adrian Chen
+    return '<input type="text" name="'+name+'">'
 }
 
 lib.generateFormTextFieldWithLabel = function(name, label) {
@@ -60,11 +62,22 @@ lib.generateFormTextFieldWithLabel = function(name, label) {
 }
 
 lib.generateDropdownList = function(arrayOfValues, arrayOfText) {
-    return "not yet implemented"
+    //Adrian Chen
+    var accumulator = "<select>\n"
+    for (var i = 0; i < arrayOfValues.length; i++) {
+        accumulator +='  <option value="'+arrayOfValues[i]+'">'+arrayOfText[i]+'</option>\n'
+    };
+    accumulator += "</select>"
+    return accumulator
 }
 
 lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allowfullscreen) {
-    return "not yet implemented"
+    //Adrian Chen
+    accumulator = '<iframe width="'+width+'" height="'+height+'" src="//www.youtube.com/embed/'+videoId+'"'
+    if(allowfullscreen)
+        accumulator += " allowfullscreen"
+    accumulator += "></iframe>"
+    return accumulator
 }
 
 module.exports = lib
