@@ -71,4 +71,5 @@ lib.generateYoutubeVideoEmbeddableFrame = function(width, height, videoId, allow
     myVideo += "></iframe>"
 return myVideo
 }
+
 module.exports = lib
